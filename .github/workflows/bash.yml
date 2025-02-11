@@ -14,3 +14,10 @@ jobs: # indicating multiple jobs
     steps: 
       - name: Check out the repo 
         uses: actions/checkout@v4 #runs sequance of actions called actions. running portion of it 
+        
+      - name: Run multiple commands manually 
+        run: pwd
+            ls -a 
+
+      - name: Run multiple commands manually 
+        run: bash scripts/bash.sh
