@@ -1,0 +1,16 @@
+
+name: Run a bash command
+
+on:
+  workflow_dispatch: #manual trigger
+  push: #change on the main branch 
+    branches: [main]
+
+
+jobs: # indicating multiple jobs
+  run_bash_command: # name of the job that yml file understand
+    name: Run a bash command using github actions #human  readable name 
+    runs-on: ubuntu-latest # which operating system does this code run on 
+    steps: 
+      - name: Check out the repo 
+        uses: actions/checkout@v4 #runs sequance of actions called actions. running portion of it 
